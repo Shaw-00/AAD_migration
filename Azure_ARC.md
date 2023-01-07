@@ -1,6 +1,6 @@
 # AAD_migration
 
-## Set up Azure Active Directory authentication for SQL Server (1 hr)
+##  Step 1 Set up Azure Active Directory authentication for SQL Server (1 hr)
 Prequisite :- SQL Server is connected to Azure ARC
 
 Azure Arc-enabled SQL Server
@@ -17,9 +17,9 @@ SQL Server on Arc-enabled servers brings all the Azure management capabilities t
 
 For Authentication :- To perform Azure AD authentication, SQL Server needs to be able to query Azure AD and requires an Azure AD app registration, which it can authenticate as. The app registration also needs a handful of permissions for the queries SQL Server will perform.
 
-## Create and register an Azure AD application and Grant application permissions (30 min)
+## Step 2 Create and register an Azure AD application and Grant application permissions (30 min)
 
-## Grant application permissions (30 min)
+## Step 3 Grant application permissions (30 min)
 Select Add a permission > Microsoft Graph > Application permissions
 
 - Check Directory.Read.All
@@ -33,10 +33,10 @@ Select Add a permission > Microsoft Graph > Application permissions
 - Select Add permissions
 - Select Grant admin consent
 
-## Create and assign a certificate (1 hr)
+## Step 4 Create and assign a certificate (1 hr)
 To grant Admin consent to the permissions above, your account requires a role of Azure AD Global Administrator or Privileged Role Administrator.
 
-## Configure Azure AD authentication for SQL Server through Azure portal (1 hr)
+## Step 5 Configure Azure AD authentication for SQL Server through Azure portal (1 hr)
 The Azure AD admin login is listed in sys.server_principals, but is not part of the sysadmin role. To grant the Azure AD admin the sysadmin role, use the sp_addsrvrolemember stored procedure.
 
 Once the Azure AD admin login is granted the sysadmin role, changing the Azure AD admin in the Azure portal does not remove the previous login that remains as a sysadmin. To remove the login, it must be dropped manually.
