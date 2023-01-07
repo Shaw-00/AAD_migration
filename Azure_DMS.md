@@ -30,11 +30,11 @@
 
 - Create a blob container and retrieve its SAS URI by using the steps in the article Manage Azure Blob Storage resources with Storage Explorer, be sure to select all permissions (Read, Write, Delete, List) on the policy window while creating the SAS URI. This detail provides Azure Database Migration Service with access to your storage account container for uploading the backup files used for migrating databases to SQL Managed Instance.
 
-## Register the resource provider
+##  Step 1 Register the resource provider
 Register the Microsoft.DataMigration resource provider before you create your first instance of the Database Migration Service.
 
-## Create an Azure Database Migration Service instance
+## Step 2 Create an Azure Database Migration Service instance
 
-## Create a migration project and Specify source details and target details
+## Step 3 Create a migration project and Specify source details and target details
 
-## Select logins and configure migration settings
+## Step 4 Select logins and configure migration settings
